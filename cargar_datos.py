@@ -18,8 +18,11 @@ def cargar_datos(path:str):
     # Prueba de que anda normalizar
     # prueba = np.array([[23,0.1,1000],[54,0.7,2000],[42,0.4,1444]])
     # print("shape prueba"+str(prueba.shape))
+    # np.random.shuffle(prueba)
+
+    # print("prueba")
     # normalizar(prueba)
-    # print(prueba)
+    # print(np.array_str(prueba, precision=2, suppress_small=True))
 
     normalizar(data)
 
@@ -53,4 +56,3 @@ def buscar_min_max_a_traves_de_columnas(array_de_arrays, posicion):
             maximo = value
 
     return minimo, maximo
-
