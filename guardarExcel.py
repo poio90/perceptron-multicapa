@@ -1,6 +1,12 @@
+import os
 import pandas as pd
 
 resultados = "resultados/"
+
+try:
+    os.mkdir(resultados)
+except OSError as e:
+    pass
 
 def guardarCSV(array, nombre):
     pd.DataFrame(array).to_csv(resultados+nombre+".csv")
